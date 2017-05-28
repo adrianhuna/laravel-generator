@@ -39,5 +39,5 @@ class MyAPIRequest extends APIRequest
         }
 
         return $res;
-    }  
+    }
 }
