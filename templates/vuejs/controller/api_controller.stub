@@ -2,8 +2,8 @@
 
 namespace $NAMESPACE_API_CONTROLLER$;
 
-use $NAMESPACE_API_REQUEST$\Create$MODEL_NAME$APIRequest;
-use $NAMESPACE_API_REQUEST$\Update$MODEL_NAME$APIRequest;
+use $NAMESPACE_API_REQUEST$\Create$MODEL_NAME$Request;
+use $NAMESPACE_API_REQUEST$\Update$MODEL_NAME$Request;
 use $NAMESPACE_MODEL$\$MODEL_NAME$;
 use $NAMESPACE_REPOSITORY$\$MODEL_NAME$Repository;
 use Illuminate\Http\Request;
@@ -14,7 +14,7 @@ use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
 $DOC_CONTROLLER$
-class $MODEL_NAME$APIController extends InfyOmBaseController
+class $MODEL_NAME$Controller extends InfyOmBaseController
 {
     /** @var  $MODEL_NAME$Repository */
     private $$MODEL_NAME_CAMEL$Repository;
@@ -42,11 +42,11 @@ class $MODEL_NAME$APIController extends InfyOmBaseController
         }
 
         $perPage = request()->has('per_page') ? (int) request()->per_page : null;
-        return response()->json($query->paginate($perPage));    
+        return response()->json($query->paginate($perPage));
     }
 
     $DOC_STORE$
-    public function store(Create$MODEL_NAME$APIRequest $request)
+    public function store(Create$MODEL_NAME$Request $request)
     {
         $input = $request->all();
 
@@ -69,7 +69,7 @@ class $MODEL_NAME$APIController extends InfyOmBaseController
     }
 
     $DOC_UPDATE$
-    public function update($id, Update$MODEL_NAME$APIRequest $request)
+    public function update($id, Update$MODEL_NAME$Request $request)
     {
         $input = $request->all();
 
