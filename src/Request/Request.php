@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use InfyOm\Generator\Utils\ResponseUtil;
 use Response;
 
-class APIRequest extends FormRequest
+class Request extends FormRequest
 {
     /**
      * Get the proper failed validation response for the request.
