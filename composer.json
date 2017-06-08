@@ -1,6 +1,7 @@
 {
     "name": "infyomlabs/laravel-generator",
     "description": "InfyOm Laravel Generator",
+    "type": "vcs",
     "keywords": [
         "laravel",
         "api",
