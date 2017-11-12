@@ -5,12 +5,6 @@ use Illuminate\Database\Schema\Blueprint;
 
 class Create$MODEL_NAME_PLURAL$Table extends Migration
 {
-
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('$TABLE_NAME$', function (Blueprint $table) {
@@ -18,11 +12,6 @@ class Create$MODEL_NAME_PLURAL$Table extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::drop('$TABLE_NAME$');
